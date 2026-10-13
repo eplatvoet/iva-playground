@@ -1,0 +1,138 @@
+#overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(#000000, 0.75);
+    z-index: 300;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.05s;
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.close {
+    height: 4rem;
+    width: 4rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 400;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.05s;
+    box-sizing: border-box;
+    padding: 1vh 1vw;
+    text-align: center;
+    img {
+        width: auto;
+        height: 100%;
+        margin: 0 auto;
+    }
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.modal {
+    position: absolute;
+    height: 84vh;
+    width: 96vw;
+    top: 8vh;
+    left: 2vw;
+    margin: auto;
+    background: $white;
+    opacity: 0;
+    transition: all 0.05s;
+    z-index: 350;
+    pointer-events: all;
+    visibility: hidden;
+    padding: 5.5vh 4vw;
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+    &.pi {
+        .content {
+            box-sizing: border-box;
+            height: 66vh;
+            width: 100%;
+            overflow: scroll;
+            img {
+                height: auto;
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+    &.chapter-video-modal{
+        .chaptered-video-wrapper-modal{
+            display:flex;
+            flex-direction:column;
+            align-items: center;
+            margin: 3rem 0;
+            #playVideoModal {
+                &.hide {
+                    display: none;
+                }
+            }
+            #chVideoModal {
+                display: none;
+                &.show {
+                    display: block;
+                }
+            }
+            .ch-vid-btn-wrap-modal{
+                display:flex;
+                .ch-vid-btn-modal{
+                    padding: 0 2rem;
+                    margin: 2rem 1rem;
+                }
+            }
+        }
+    }
+    &.resources-modal{
+        .outer-resource-wrapper-modal{
+            margin-top: 3vh;
+            height: 64vh;
+        }
+        &.rpdf-modal{
+            .outer-resource-wrapper-modal{
+                overflow: scroll;
+                .img-wrapper{
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        &.rv-modal{
+            .outer-resource-wrapper-modal{
+                .video-wrapper{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                }
+            }
+        }
+        &.rp-modal{
+            .outer-resource-wrapper-modal{
+                .podcast-wrapper{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+
+                }
+            }
+        }
+    }
+}
+

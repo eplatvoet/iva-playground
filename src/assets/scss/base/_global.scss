@@ -1,0 +1,160 @@
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
+/* global box-sizing */
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+    font-family: sans-serif;
+}
+
+/* html element 62.5% font-size for REM use */
+
+html {
+    // Scales the root font size with viewport width: 14px at 1371px wide.
+    // font-size: calc(100vw / 1371 * 14);
+    overflow: hidden;
+}
+
+body {
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: $white;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
+    -o-user-select:none;
+    margin: 0;
+}
+
+
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
+
+// .wrapper {
+//     width: 100vw;
+//     height: 100vh;
+//     margin: 0 0;
+//     overflow: hidden;
+//     padding: 0;
+// }
+
+// main {
+//     width: 100%;
+//     height: 65vh;
+//     margin: 0;
+//     padding: 0;
+// }
+
+/*------------------------------------*\
+    GLOBAL CLASSES: COLORS
+\*------------------------------------*/
+.navy{
+    color: $navy;
+}
+.dark-red{
+    color: $darkRed;
+}
+.white{
+    color: $white;
+}
+.light-blue{
+    color: $lightBlue;
+}
+.reg-blue{
+    color: $regBlue;
+}
+.red{
+    color: $red;
+}
+/*------------------------------------*\
+    GLOBAL CLASSES: MARGINS
+\*------------------------------------*/
+.mt-10{
+    margin-top: 10px;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.mt-40{
+    margin-top: 40px;
+}
+.mb-10{
+    margin-bottom: 10px;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+/*------------------------------------*\
+    GLOBAL CLASSES: FONT SIZES
+\*------------------------------------*/
+.fs-20{
+    font-size: 1.25rem;
+}
+.fs-24{
+    font-size: 1.5rem;
+}
+.fs-34{
+    font-size: 2.125rem;
+}
+.fs-40{
+    font-size: 2.5rem;
+}
+/*------------------------------------*\
+    GLOBAL CLASSES: FLEX
+\*------------------------------------*/
+.flex-wrapper{
+    display:flex;
+    &.fifty-fifty{
+        .left-block, .right-block{
+            flex-basis: 50%;
+        }
+    }
+    &.thirds{
+        .left-block, .middle-block, .right-block{
+            flex-basis: 33%;
+        }
+    }
+    &.space-between{
+        justify-content: space-between;
+    }
+    &.space-around{
+        justify-content: space-around
+    }
+    &.space-evenly{
+        justify-content: space-evenly;
+    }
+    &.justify-center{
+        justify-content: center;
+    }
+    &.align-center{
+        align-items: center;
+    }
+    &.column{
+        flex-direction: column;
+    }
+}
+
+
+/*------------------------------------*\
+    MISC
+\*------------------------------------*/
+
+::selection {
+    text-shadow: none;
+}
+
+::-webkit-selection {
+    text-shadow: none;
+}
+
+::-moz-selection {
+    text-shadow: none;
+}
