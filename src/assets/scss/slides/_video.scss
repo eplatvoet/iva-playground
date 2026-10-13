@@ -1,0 +1,42 @@
+// PLAYGROUND 5 SLIDE 
+.video1{
+    .outer-video-wrapper{
+        .left-block video {
+            display: block;
+        }
+        // .right-block{
+        //     .quote-wrapper{
+        //         background-color: $lightGray;
+        //         padding: 4vw;
+        //         height: 100%;
+        //     }
+        // }
+    }
+}
+
+// PLAYGROUND 11 SLIDE
+.chap-video{
+    .chaptered-video-wrapper{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        #playVideo {
+            &.hide {
+                display: none;
+            }
+        }
+        #chVideo {
+            display: none;
+            &.show {
+                display: block;
+            }
+        }
+        .ch-vid-btn-wrap{
+            display:flex;
+            .ch-vid-btn{
+                padding: 0 2rem;
+                margin: 0 1rem;
+            }
+        }
+    }
+}
