@@ -1,0 +1,35 @@
+extends ../templates/base
+
+block vars 
+    - var page_title = "Home"
+    - var page_class = "home"
+    - var btm_nav = "pg1" 
+    - var refs = ""
+    - var extra_modals = false
+    //- - var extra_js = false
+     
+
+block content
+    div.slide-content-wrapper 
+        img(src='./assets/images/background.jpg' class='bg-img')
+        div.content-wrap
+            h1 IVA Template 
+            h2.mt-10 This template contains basic elements for a Veeva CLM Presentation.
+            h2.mt-40.underline Directory: 
+            div.flex-wrapper.fifty-fifty.mt-10 
+                div.left-block 
+                    p.fs-20.mt-10 1 -- Home (current location)
+                    p.fs-20.mt-10 2 -- Accordion 
+                    p.fs-20.mt-10 3 -- Carousel 
+                    p.fs-20.mt-10 4 -- Cards 
+                    p.fs-20.mt-10 5 -- Video 
+                    p.fs-20.mt-10 6 -- Progression animation 
+                    p.fs-20.mt-10 7 -- Show/Hide 
+                div.right-block 
+                    p.fs-20.mt-10 &ensp;8 -- Lottie files 
+                    p.fs-20.mt-10 &ensp;9 -- Tabbed Content 
+                    p.fs-20.mt-10 10 -- Calculator 
+                    p.fs-20.mt-10 11 -- Chaptered Video 
+                    p.fs-20.mt-10 12 -- Resources (Scroll)
+                    p.fs-20.mt-10 13 -- Resources (Tabbed)
+                    p.fs-20.mt-10 14 -- PDF Library (w/ PDF Slides)
